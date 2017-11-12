@@ -10,7 +10,7 @@ class PayloadTest {
 
     @Test
     public void testAddStringField() {
-        
+
         StringField field = new StringField("sub", "1234567890");
         Payload payload = new Payload();
 
