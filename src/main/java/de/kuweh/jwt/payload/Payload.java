@@ -1,16 +1,25 @@
 package de.kuweh.jwt.payload;
 
+import com.google.gson.GsonBuilder;
+import de.kuweh.jwt.json.EncodeableInterface;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-class Payload {
+public class Payload implements EncodeableInterface {
 
-    ArrayList<FieldInterface> data = new ArrayList<FieldInterface>();
+    HashMap<String, FieldInterface> data = new HashMap<>();
 
-    void add(FieldInterface value) {
-        data.add(value);
+    void add(String name, FieldInterface value) {
+        data.put(name, value);
     }
 
-    ArrayList<FieldInterface> getData() {
+    HashMap<String, FieldInterface> getData() {
         return this.data;
+    }
+
+    @Override
+    public String toJson(GsonBuilder gson) {
+
+        return null;
     }
 }

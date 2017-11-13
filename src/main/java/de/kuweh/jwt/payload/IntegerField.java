@@ -2,28 +2,12 @@ package de.kuweh.jwt.payload;
 
 public class IntegerField implements FieldInterface<Integer> {
 
-    private String name;
     private Integer value;
 
     IntegerField() {}
 
-    IntegerField(String name, Integer value) {
-        this.setName(name);
+    IntegerField(Integer value) {
         this.setValue(value);
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String getName() throws FieldEmptyException {
-
-        if (this.name == null) {
-            throw new FieldEmptyException("No name set!");
-        }
-        return this.name;
     }
 
     @Override

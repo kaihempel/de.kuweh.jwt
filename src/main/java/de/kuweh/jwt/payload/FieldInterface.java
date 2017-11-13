@@ -8,21 +8,6 @@ package de.kuweh.jwt.payload;
 interface FieldInterface<T> {
 
     /**
-     * Field name
-     *
-     * @param name The name of the field
-     */
-    void setName(String name);
-
-    /**
-     * Returns the name of the field
-     *
-     * @return The name of the field
-     * @throws FieldEmptyException
-     */
-    String getName() throws FieldEmptyException;
-
-    /**
      * The value of the field
      *
      * @param value Field value as the defined type
