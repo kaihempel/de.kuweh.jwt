@@ -1,11 +1,10 @@
-package de.kuweh.jwt.payload;
+package de.kuweh.jwt.json.fields;
 
 import com.google.gson.stream.JsonWriter;
+import de.kuweh.jwt.json.fields.BooleanField;
+import de.kuweh.jwt.json.fields.FieldEmptyException;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
-import org.mockito.Mock;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
 
 import java.io.IOException;
 

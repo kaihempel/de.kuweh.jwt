@@ -1,5 +1,7 @@
-package de.kuweh.jwt.payload;
+package de.kuweh.jwt.json.fields;
 
+import de.kuweh.jwt.json.fields.FieldEmptyException;
+import de.kuweh.jwt.json.fields.StringField;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
