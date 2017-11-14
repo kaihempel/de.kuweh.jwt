@@ -9,11 +9,9 @@ class StringFieldTest {
     void setValueByConstrutor() {
         String expected = "Test by Constructor";
 
-        StringField field = new StringField("test", expected);
+        StringField field = new StringField(expected);
 
         try {
-
-            assertEquals("test", field.getName());
             assertEquals(expected, field.getValue());
 
         } catch (FieldEmptyException e) {
@@ -25,12 +23,9 @@ class StringFieldTest {
     void setValue() {
 
         StringField field = new StringField();
-        field.setName("test");
         field.setValue("TEST");
 
         try {
-
-            assertEquals("test", field.getName());
             assertEquals("TEST", field.getValue());
 
         } catch (FieldEmptyException e) {
@@ -44,11 +39,6 @@ class StringFieldTest {
         StringField field = new StringField();
 
         Throwable exception = assertThrows(FieldEmptyException.class, () -> {
-            field.getName();
-        });
-        assertEquals("No name set!", exception.getMessage());
-
-        exception = assertThrows(FieldEmptyException.class, () -> {
             field.getValue();
         });
         assertEquals("No value set!", exception.getMessage());

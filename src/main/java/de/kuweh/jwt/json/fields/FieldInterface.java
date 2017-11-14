@@ -1,11 +1,11 @@
-package de.kuweh.jwt.payload;
+package de.kuweh.jwt.json.fields;
 
 /**
  * Payload field definition
  *
  * @param <T> Type of the field
  */
-interface FieldInterface<T> {
+public interface FieldInterface<T> {
 
     /**
      * The value of the field
