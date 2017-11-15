@@ -1,6 +1,6 @@
 package de.kuweh.jwt.json;
 
-import de.kuweh.jwt.payload.Payload;
+import de.kuweh.jwt.content.Payload;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
