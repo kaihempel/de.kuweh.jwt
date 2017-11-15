@@ -1,4 +1,4 @@
-package de.kuweh.jwt.payload;
+package de.kuweh.jwt.content;
 
 import com.google.gson.GsonBuilder;
 import de.kuweh.jwt.json.FieldTypeAdapter;
@@ -43,6 +43,26 @@ class PayloadTest {
 
             IntegerField current = (IntegerField) fields.get("id");
             assertEquals(123, current.getValue().intValue());
+
+        } catch (FieldEmptyException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    void addDoubleField() {
+
+        DoubleField field = new DoubleField(1.23);
+        Payload payload = new Payload();
+
+        payload.add("id", field);
+
+        HashMap<String, FieldInterface> fields = payload.getData();
+
+        try {
+
+            DoubleField current = (DoubleField) fields.get("id");
+            assertEquals(1.23, current.getValue().doubleValue());
 
         } catch (FieldEmptyException e) {
             e.printStackTrace();
